@@ -15,7 +15,7 @@ the GPIO map changes if the schematic's final pin assignment differs from B7.
 | Output 1 | GPIO **16**, WS281x, length = your strip |
 | Output 2 | GPIO **18**, WS281x, length = your strip |
 | Automatic Brightness Limiter | **Enabled** |
-| Maximum current | **1700 mA** (keeps the total ≤ 2 A, see PWR-02) |
+| Maximum current | **1500 mA** (below the eFuse's 1.49 A minimum limit; keeps the total ≤ 2 A, see PWR-02) |
 | LED current | as specified for your strip (55 mA typical for WS2812B) |
 | Button 0 | GPIO **0** (BOOT) |
 | Button 1 | GPIO **15** (USER) |
@@ -38,5 +38,5 @@ the GPIO map changes if the schematic's final pin assignment differs from B7.
 | eFuse FLT/PG | 7 | strip-rail trip indication |
 | CC1 / CC2 sense | 1 / 2 | USB-C source capability (PWR-06) |
 | VBUS sense | 8 | sag detection for adaptive limiting (PWR-08) |
-| BC1.2 status | 9, 10 | USB-A charger type (PWR-07) |
+| BC1.2 CHG_DET / SW_OPEN | 9 / 10 | USB-A charger type (PWR-07), decode table in requirements B11 |
 | Status LED | 38 | optional status output |

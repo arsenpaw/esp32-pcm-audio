@@ -9,7 +9,8 @@ LED strips and has an on-board I2S microphone for sound-reactive effects.
 - **Outputs:** 2 × 3-pin JST-XH (5V / DATA / GND), with 5 V data level shifting.
 - **Audio:** ICS-43434 I2S MEMS microphone.
 
-> Status: **rev A — design not started.** The KiCad project is an empty skeleton.
+> Status: **rev A — schematic drawn, ERC clean.** Part numbers are not checked against assembler
+> stock, and the board layout is not started.
 
 ## Documents
 

@@ -94,12 +94,13 @@ or was proposed by Claude and not objected to. Derived items should be confirmed
 - Unreliable strip data.
 - A bulky board, such as a dev board on a carrier or through-hole modules.
 
-## A5. Open questions (owner to answer)
+## A5. Open questions
 
-1. **Size / enclosure:** is there a target size, or a specific case it must fit?
-2. **After a strip cut** (PWR-09): latch off until replugged, or auto-retry?
-3. **Strip type:** WS2812B/SK6812 5 V assumed. Anything else, such as 12 V strips or
-   clock+data strips (APA102)?
+1. **Size / enclosure:** no target named. Working assumption: ≤ 45 × 25 mm (Derived, B8).
+2. **After a strip cut** (PWR-09): working assumption is latch off until replugged (Derived).
+3. **Strip type and length:** answered by the owner on 2026-11-15. Strip length is flexible.
+   The 2 A budget stays, and WLED's brightness limiter scales output to fit it. 5 V
+   WS2812B/SK6812-class strips remain the assumption (LED-01).
 
 ## A6. Acceptance criteria
 
@@ -239,7 +240,7 @@ because ADC2 doesn't work while Wi-Fi is on.
 ## B9. WLED configuration (stock firmware)
 
 - An official ESP32-S3 build that includes AudioReactive.
-- **LED outputs:** GPIO16 and GPIO18. ABL enabled at **1700 mA**.
+- **LED outputs:** GPIO16 and GPIO18. ABL enabled at **1500 mA** (see B11).
 - **AudioReactive:** generic I2S, SD=4, WS=5, SCK=6.
 - **Buttons:** GPIO0 and GPIO15.
 
@@ -283,7 +284,40 @@ because ADC2 doesn't work while Wi-Fi is on.
   .gitignore                  KiCad backups/caches, fab/
   ```
 
-## B11. To be defined during implementation
+## B11. Schematic as drawn (2026-11-15)
+
+The schematic follows B1–B7 with these concrete choices. ERC is clean. Values come from the
+datasheets; LCSC stock and MPNs for passives are not checked yet.
+
+- **eFuse:** TI **TPS259630DDA** (latch-off after thermal shutdown, adjustable OVLO).
+  - R_ILM = 562 Ω gives 1.62 A typical, about 1.49–1.73 A over tolerance. It limits the
+    current actively and latches off when it overheats, so a short is held at the limit
+    for a moment before the cut.
+  - Divider 75 k / 6.04 k / 20 k: strips off below 4.27 V, on above 4.66 V, off above 6.06 V.
+    The undervoltage cut is not latched; the strips return when VBUS recovers.
+  - C_dVdt = 47 nF, about 0.9 V/ms, so the 470 µF bulk cap charges at roughly 0.4 A.
+  - FLT is pulled up to 3.3 V and goes to GPIO7.
+- **WLED limiter:** set ABL to **1500 mA**, not 1700 mA, so it stays under the eFuse's
+  minimum limit.
+- **BC1.2:** TI **BQ24392**. GOOD_BAT is tied high so the D+/D− switch closes on a PC port.
+  - CHG_DET (5 V level, divided 10 k / 20 k) → GPIO9. SW_OPEN (pulled up to 3.3 V) → GPIO10.
+  - GPIO9 low + GPIO10 low: standard PC port. High + low: charging PC port. High + high:
+    wall charger, including Apple. Low + high: unknown source.
+  - Apple chargers are reported as "charger" only; the 1 A / 2.1 A / 2.4 A classes are not
+    told apart.
+- **CC sense:** each CC pin goes through 10 k and 100 nF to GPIO1 / GPIO2.
+- **LED data:** 100 k pull-downs on the buffer inputs keep the outputs low during boot.
+- **Nets** cross sheets by global label; the sheets have no hierarchical pins.
+- **Part numbers:** every BOM line has an MPN and an LCSC number, checked against the JLCPCB
+  catalog of 2026-11-14. Two parts are not in JLCPCB assembly stock and must be pre-ordered
+  from LCSC: **ESP32-S3-MINI-1-N8** (C2913206) and **ICS-43434** (C5656610). The owner asked
+  for the cheapest option; both are cheaper than the in-stock alternatives
+  (ESP32-S3-MINI-1U-N4R2 plus an antenna, ICS-43432). Several distributors mark the ICS-43434
+  as not recommended for new designs, so re-check before any later revision.
+- **Strip connectors:** Megastar ZX-XH2.54-3PWT (JST XH compatible). Check its pads against
+  the JST footprint at layout.
+
+## B12. To be defined during implementation
 
 - The exact eFuse, ILIM and UVLO resistor values.
 - The exact BC1.2 detector, and whether to fall back to TUSB320.
