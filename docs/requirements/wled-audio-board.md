@@ -96,7 +96,7 @@ or was proposed by Claude and not objected to. Derived items should be confirmed
 
 ## A5. Open questions
 
-1. **Size / enclosure:** no target named. Working assumption: ≤ 45 × 25 mm (Derived, B8).
+1. **Size / enclosure:** no target named. The board is placed at 66 × 32 mm (Derived, B8).
 2. **After a strip cut** (PWR-09): working assumption is latch off until replugged (Derived).
 3. **Strip type and length:** answered by the owner on 2026-11-15. Strip length is flexible.
    The 2 A budget stays, and WLED's brightness limiter scales output to fit it. 5 V
@@ -229,7 +229,9 @@ because ADC2 doesn't work while Wi-Fi is on.
 
 ## B8. Board
 
-- **Target size:** ≤ 45 × 25 mm. This is a placeholder until A5-1 is answered.
+- **Size:** **66 × 32 mm** as placed (2026-11-15). The parts do not fit single-sided in
+  45 × 25 mm: the footprints alone cover about 1,040 mm² of its 1,125 mm². Getting back
+  toward 45 × 25 mm needs parts on both sides.
 - **Layers:** 4 layers, 1.6 mm (signal / GND / power / signal). Two layers are acceptable if the
   layout closes.
 - **Assembly:** single-sided SMD, so it can be fully assembled (JLCPCB by default, preferring

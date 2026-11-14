@@ -10,7 +10,7 @@ LED strips and has an on-board I2S microphone for sound-reactive effects.
 - **Audio:** ICS-43434 I2S MEMS microphone.
 
 > Status: **rev A — schematic drawn, ERC clean.** Part numbers are not checked against assembler
-> stock, and the board layout is not started.
+> stock. Parts are placed on a 66 × 32 mm board; routing is not done.
 
 ## Documents
 
@@ -28,7 +28,7 @@ docs/requirements/          requirements & proposed design
 hardware/                   KiCad 10 project
   esp32-wled-audio.kicad_pro
   esp32-wled-audio.kicad_sch   top sheet → power / usb / mcu / leds / audio
-  esp32-wled-audio.kicad_pcb   4-layer, placeholder 45×25 mm outline
+  esp32-wled-audio.kicad_pcb   4-layer, 66×32 mm, parts placed, not routed
   lib/                      project-specific symbols, footprints, 3D models
   fab/                      generated outputs (gitignored until release)
 firmware/                   WLED configuration notes
