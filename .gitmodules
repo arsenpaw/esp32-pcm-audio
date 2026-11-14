@@ -1,0 +1,5 @@
+[submodule "tools/kicad-mcp-server"]
+	path = tools/kicad-mcp-server
+	url = https://github.com/mixelpixx/KiCAD-MCP-Server.git
+	branch = stable
+	ignore = untracked

@@ -1,0 +1,21 @@
+# KiCad backups, caches and local state
+*.kicad_prl
+*-backups/
+*.bak
+*.bck
+*-bak
+*.lck
+_autosave-*
+\#auto_saved_files#
+fp-info-cache
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# Generated manufacturing outputs (commit explicitly on release)
+hardware/fab/*
+!hardware/fab/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

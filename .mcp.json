@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "kicad": {
+      "command": "node",
+      "args": ["tools/kicad-mcp-server/dist/index.js"],
+      "env": {
+        "KICAD_PYTHON": "tools/kicad-mcp-server/venv/bin/python3",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}
