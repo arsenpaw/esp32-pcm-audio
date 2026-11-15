@@ -319,7 +319,24 @@ datasheets; LCSC stock and MPNs for passives are not checked yet.
 - **Strip connectors:** Megastar ZX-XH2.54-3PWT (JST XH compatible). Check its pads against
   the JST footprint at layout.
 
-## B12. To be defined during implementation
+## B12. Layout as routed (2026-11-15)
+
+- **Stackup use:** signals on the top and bottom layers. Inner layer 1 is a solid ground
+  plane. Inner layer 2 is split into a VBUS plane (USB side) and a +5V_STRIP plane (eFuse
+  output to the strip connectors).
+- **How it was routed:** Freerouting 2.5.0 for the bulk, then `scripts/finish_route.py` for
+  what it left open: vias from power and ground pads into the planes (two per high-current
+  pad where they fit), and rip-up-and-retry for boxed-in nets. No hand routing.
+- **Rules:** 0.15 mm clearance, 0.2 mm signal tracks, 0.5 mm power tracks, 0.6/0.3 mm vias.
+  `hardware/esp32-wled-audio.kicad_dru` allows 0.1 mm against the BQ24392's pads.
+- **DRC:** no errors, no unconnected items, schematic parity clean. Remaining warnings: the
+  library silkscreen of J1 and U5 crosses the board edge, and three thermal-relief warnings
+  on the eFuse's ground pad.
+- **Not reviewed:** USB D+/D− are not routed as a matched 90 Ω pair (the ESP32-S3 port is
+  full-speed only). The 2 A paths rely on plane vias and 0.5 mm stubs and should be checked
+  by eye. Most reference designators are hidden on silkscreen to clear overlaps.
+
+## B13. To be defined during implementation
 
 - The exact eFuse, ILIM and UVLO resistor values.
 - The exact BC1.2 detector, and whether to fall back to TUSB320.
