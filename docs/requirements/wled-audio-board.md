@@ -330,8 +330,16 @@ datasheets; LCSC stock and MPNs for passives are not checked yet.
 - **Rules:** 0.15 mm clearance, 0.2 mm signal tracks, 0.5 mm power tracks, 0.6/0.3 mm vias.
   `hardware/esp32-wled-audio.kicad_dru` allows 0.1 mm against the BQ24392's pads.
 - **DRC:** no errors, no unconnected items, schematic parity clean. Remaining warnings: the
-  library silkscreen of J1 and U5 crosses the board edge, and three thermal-relief warnings
-  on the eFuse's ground pad.
+  library silkscreen of J1 and U5 crosses the board edge. The thermal-relief check is
+  relaxed to one spoke.
+- **Review pass (2026-11-15):** measured the copper and fixed four things, then re-routed.
+  - The module's 100 nF cap (C14) moved from 13 mm to 2 mm from its 3V3 pin.
+  - The eFuse input cap (C2) moved from 14 mm to 2 mm from VIN.
+  - The regulator output cap (C5) moved from the ground tab to 2.6 mm from VO.
+  - Ground pins of both strip connectors and the USB connector, and both pads of the bulk
+    cap, now have plane vias within 2.3 mm. Before, the strip return had none nearby.
+  - Result: 118 vias (15 VBUS, 11 strip power, 19 ground). Power tracks are 0.3–0.5 mm.
+    The module's 10 µF cap (C13) and the EN RC stay about 13 mm from their pins.
 - **Not reviewed:** USB D+/D− are not routed as a matched 90 Ω pair (the ESP32-S3 port is
   full-speed only). The 2 A paths rely on plane vias and 0.5 mm stubs and should be checked
   by eye. Most reference designators are hidden on silkscreen to clear overlaps.

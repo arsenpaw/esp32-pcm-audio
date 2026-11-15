@@ -27,6 +27,10 @@ GND_R = [(100.8, 100.8, 160.6, 131.2)]
 PLANES = {"VBUS": VBUS_R, "+5V_STRIP": STRIP_R, "GND": GND_R}
 HEAVY = {("J1", "A4"), ("J1", "A9"), ("J1", "B4"), ("J1", "B9"), ("U1", "4"), ("U1", "5"),
          ("C3", "1"), ("J2", "1"), ("J3", "1"), ("U2", "1")}
+# pads that must have two plane vias of their own within reach (2 A paths and their returns)
+NEAR2 = [("J1", "A4"), ("J1", "A9"), ("U1", "4"), ("U1", "5"), ("C3", "1"), ("C3", "2"),
+         ("J2", "1"), ("J3", "1"), ("J2", "3"), ("J3", "3"), ("J1", "A1"), ("J1", "A12"),
+         ("U2", "1"), ("U2", "2"), ("C4", "2"), ("C5", "2")]
 
 FPS = list(b.GetFootprints())
 TRACK_OBJS = list(b.GetTracks())
@@ -314,11 +318,15 @@ def pad_escape(cluster, grids):
     for it in cluster:
         g = it["g"]
         if g[0] == "rect":
+            # stay off the pad rim so a new track's edge cannot stick out past the pad
+            sx = min(0.2, max(0.0, (g[3] - g[1]) / 2 - 0.06))
+            sy = min(0.2, max(0.0, (g[4] - g[2]) / 2 - 0.06))
+            g = ("rect", g[1] + sx, g[2] + sy, g[3] - sx, g[4] - sy)
             x1, y1, x2, y2 = g[1], g[2], g[3], g[4]
             r = 0.0
         else:
             x1, y1, x2, y2 = min(g[1], g[3]), min(g[2], g[4]), max(g[1], g[3]), max(g[2], g[4])
-            r = max(g[5] - 0.03, 0.05)
+            r = 0.07      # centreline only, for the same reason
         cx1, cy1 = cell(x1 - r, y1 - r)
         cx2, cy2 = cell(x2 + r, y2 + r)
         for cy in range(max(0, cy1), min(NY - 1, cy2) + 1):
@@ -382,7 +390,7 @@ for ROUND in range(6):
             cl.sort(key=len)
             a = cl[0]
             ok = False
-            for width in (0.2, 0.15, 0.13):
+            for width in ((0.5, 0.3, 0.2) if net == '+3V3' else (0.2, 0.15, 0.13)):
                 grids, gv = obstacle_maps(net, its, width / 2)
                 src = seeds(a)
                 src_set = set(src)
@@ -525,6 +533,48 @@ for net in ("VBUS", "+5V_STRIP", "GND"):
             if ok:
                 continue
         report.append(("via   " if ok else "FAILED via ") + f"{net} for [{tag}]")
+
+# 3. make sure each high-current pad has two plane vias close by
+for ref, num in NEAR2:
+    for _ in range(2):
+        its = items()
+        me = [i for i in its if i["kind"] == "pad" and i.get("ref") == ref and i.get("num") == num]
+        if not me:
+            break
+        net = me[0]["net"]
+        px0, py0 = me[0]["c"]
+        own_vias = [i["c"] for i in its if i["net"] == net and i["pth"]]
+        close = [v for v in own_vias if math.hypot(v[0] - px0, v[1] - py0) <= 2.3 and in_plane(net, *v)]
+        if len(close) >= 2:
+            break
+        own_smd = [i["g"] for i in its if i["net"] == net and i["kind"] == "pad" and not i["pth"]]
+        ok = False
+        for width in (0.5, 0.3, 0.2):
+            grids, gv = obstacle_maps(net, its, width / 2)
+            src = [s_ for s_ in seeds(me) if s_[0] == F]
+            src_set = set()
+            free_set = pad_escape(me, grids)
+
+            def goal(l, x, y):
+                px, py = X0 + x * G, Y0 + y * G
+                if l != F or gv[y * NX + x] or grids[B][y * NX + x] or not in_plane(net, px, py):
+                    return False
+                if math.hypot(px - px0, py - py0) > 2.3:
+                    return False
+                for r in own_smd:
+                    if r[1] - 0.32 < px < r[3] + 0.32 and r[2] - 0.32 < py < r[4] + 0.32:
+                        return False
+                return all(math.hypot(px - ox, py - oy) >= 0.95 for ox, oy in own_vias)
+            path = astar(src, goal, grids, gv, allow_via=False, max_nodes=20000)
+            if path:
+                if len(path) > 1:
+                    emit(path, net, width)
+                add_via(path[-1][1], path[-1][2], net)
+                ok = True
+                break
+        report.append(("via   " if ok else "NO ROOM for via ") + f"{net} at {ref}.{num}")
+        if not ok:
+            break
 
 print("\n".join(report))
 for t in DEAD:
