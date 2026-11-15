@@ -11,7 +11,8 @@ LED strips and has an on-board I2S microphone for sound-reactive effects.
 
 > Status: **rev A — schematic drawn, ERC clean.** Part numbers are not checked against assembler
 > stock. The 66 × 32 mm board is placed and routed; DRC shows no errors and no open
-> connections. The layout has not been reviewed by a person and no fab files are generated.
+> connections. JLCPCB files are generated in `hardware/fab/` (not committed). The layout has
+> not been reviewed by a person, and nothing has been ordered.
 
 ## Documents
 

@@ -15013,6 +15013,126 @@
 		(layer "Edge.Cuts")
 		(uuid "9cbb70be-5c14-4661-90af-cae098642647")
 	)
+	(gr_text "USB-C 5V  2A max"
+		(at 112 110 0)
+		(layer "B.SilkS")
+		(uuid "55890e9f-b05c-4679-86bf-6f12036c3a11")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "5V"
+		(at 116.5 127 0)
+		(layer "B.SilkS")
+		(uuid "3a824611-dbcd-4319-9f66-a52a5d87c2c3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "D"
+		(at 119 127 0)
+		(layer "B.SilkS")
+		(uuid "b357198b-1ada-43cc-bef0-56c9826c0589")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "STRIP 1"
+		(at 119 129.3 0)
+		(layer "B.SilkS")
+		(uuid "b3a4fcbe-8d1f-4904-bc98-526c4c2b841a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "G"
+		(at 121.5 127 0)
+		(layer "B.SilkS")
+		(uuid "61c4edfc-23d6-48fb-9359-3652856a9b26")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "5V"
+		(at 131 127 0)
+		(layer "B.SilkS")
+		(uuid "9528a898-2de7-4905-ad53-efc68dd9c42c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "D"
+		(at 133.5 127 0)
+		(layer "B.SilkS")
+		(uuid "f5d68b0f-be05-4488-9ab0-fb79a5ebcda7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "STRIP 2"
+		(at 133.5 129.3 0)
+		(layer "B.SilkS")
+		(uuid "3cc1031d-f26a-4287-8f12-0c0c4431be4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "G"
+		(at 136 127 0)
+		(layer "B.SilkS")
+		(uuid "0b87f206-f970-4948-b0f2-6c97b03ba8b8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "ESP32 WLED AUDIO  rev A"
+		(at 125 104 0)
+		(layer "B.SilkS")
+		(uuid "5e337c66-5a70-41f8-be45-2c1ae1dcf656")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
 	(segment
 		(start 117.4487 118.3754)
 		(end 116.5 117.4267)
