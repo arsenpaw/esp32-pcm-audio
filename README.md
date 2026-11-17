@@ -1,13 +1,11 @@
 # ESP32 WLED LED Driver
 
-> **The active hardware is now [`hardware_github/`](hardware_github/).** The earlier rev A design
+> **The active hardware is [`hardware/`](hardware/).** The earlier rev A design
 > is kept read-only in [`hardware_deprecated/`](hardware_deprecated/) and is no longer maintained.
 
-## Active board: `hardware_github/`
+## Active board: `hardware/`
 
-This board is based on [0xjmux/iot_leddriver_hw](https://github.com/0xjmux/iot_leddriver_hw) (see
-[hardware_github/README.md](hardware_github/README.md) for the original author's notes and
-version history). It's a WS2812B driver with:
+A WS2812B LED strip driver with:
 
 - USB-C programming, a DC barrel jack, and screw-terminal inputs.
 - Two strip outputs with a 74xx125 level shifter.
@@ -29,21 +27,18 @@ can't read PDM microphones. The pad-by-pad check is in [shop.md](shop.md).
 | Button (BOOT) | 0 |
 | Microphone (PDM) | CLK 5, DATA 6 |
 
-The upstream notes in `hardware_github/DEVELOPMENT-NOTES.md` list an older v2.2 pin map, which
-doesn't match this board.
-
-- KiCad project: `hardware_github/PCB/iot_led_strip_pcb.kicad_pro` (KiCad 8 format; opens in KiCad 10).
+- KiCad project: `hardware/PCB/iot_led_strip_pcb.kicad_pro` (KiCad 10).
 - Shopping list: [shop.md](shop.md). It uses the cheapest in-stock part for each line.
-- Case: `hardware_github/case/`.
+- Case: `hardware/case/`.
 
 ### Checks from the command line
 
 ```bash
-kicad-cli sch erc hardware_github/PCB/iot_led_strip_pcb.kicad_sch
+kicad-cli sch erc hardware/PCB/iot_led_strip_pcb.kicad_sch
 ```
 
 ```bash
-kicad-cli pcb drc hardware_github/PCB/iot_led_strip_pcb.kicad_pcb
+kicad-cli pcb drc hardware/PCB/iot_led_strip_pcb.kicad_pcb
 ```
 
 On macOS, `kicad-cli` lives at `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`.

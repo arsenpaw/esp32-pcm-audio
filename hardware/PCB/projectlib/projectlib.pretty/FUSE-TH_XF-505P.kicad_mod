@@ -1,0 +1,218 @@
+(footprint "FUSE-TH_XF-505P"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(locked yes)
+	(layer "F.Cu")
+	(property "Reference" "F2"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "88816dfc-55df-4546-8ec8-1007b977a387")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.11)
+			)
+		)
+	)
+	(property "Value" "Fuse Holder"
+		(at 0 4 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e8e2343-212a-4727-9030-7fbcb40c7847")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3bdf858e-ae23-4b47-8004-d77fff054654")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "https://www.lcsc.com/product-detail/Fuse-Holders_XFCN-XF-505P_C843270.html"
+		(at 72.15 93.55 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9fc647b5-b9b1-4a16-b907-867f8aa0c963")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C843270"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "921bcd52-bcb0-4487-b97a-7e41ad14cab6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property ki_fp_filters "*Fuse*")
+	(sheetname "Power_and_board")
+	(sheetfile "Power_and_board.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7.5 -1.7)
+		(end -7.5 2.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b0b2318-0c80-4025-a9c5-02935de15d51")
+	)
+	(fp_line
+		(start -7.5 -1.7)
+		(end 7.5 -1.7)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "964ca2b4-5f50-47d7-86cf-6008103d2591")
+	)
+	(fp_line
+		(start -7.5 2.9)
+		(end 7.5 2.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "39067ae0-dae5-432f-b591-68205f104293")
+	)
+	(fp_line
+		(start -6.15 1.65)
+		(end -2.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23ae473e-03d6-4818-9523-6dedc7fd0a57")
+	)
+	(fp_line
+		(start -6.15 2.9)
+		(end -6.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2145ff88-3090-48c2-aae3-ccbb7b9b0204")
+	)
+	(fp_line
+		(start -2.15 2.9)
+		(end -2.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e7801c0b-15b5-424c-81f7-2bc358663cf0")
+	)
+	(fp_line
+		(start 2.15 1.65)
+		(end 6.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "72645c90-be83-4bac-be9e-6f01c6b27457")
+	)
+	(fp_line
+		(start 2.15 2.9)
+		(end 2.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c3d4340b-1087-43ea-8578-c4d9b38b4774")
+	)
+	(fp_line
+		(start 6.15 2.9)
+		(end 6.15 1.65)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bac840be-e101-468e-9f73-24e813bba97a")
+	)
+	(fp_line
+		(start 7.5 -1.7)
+		(end 7.5 2.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "238782dc-c896-43d8-9d5b-93356b173bf3")
+	)
+	(fp_circle
+		(center -7.5 2.9)
+		(end -7.47 2.9)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "331a2474-1204-4f88-8e75-a7774890fc08")
+	)
+	(pad "1" thru_hole oval
+		(at -6 0 90)
+		(size 2.3 1)
+		(drill oval 1.900022 0.599999)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "83b35f02-9cf2-4501-864e-dcd7939590ab")
+	)
+	(pad "1" thru_hole oval
+		(at -2.3 0 90)
+		(size 2.3 1)
+		(drill oval 1.900022 0.599999)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fc0d82ab-5fe9-405d-95e9-0d835c6843a5")
+	)
+	(pad "2" thru_hole oval
+		(at 2.3 0 90)
+		(size 2.3 1)
+		(drill oval 1.900022 0.599999)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e6b330fc-4732-46d0-a41e-16104b2966fb")
+	)
+	(pad "2" thru_hole oval
+		(at 6 0 90)
+		(size 2.3 1)
+		(drill oval 1.900022 0.599999)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8476f225-957b-46b7-98ff-9c5ff0fbb223")
+	)
+	(embedded_fonts no)
+)

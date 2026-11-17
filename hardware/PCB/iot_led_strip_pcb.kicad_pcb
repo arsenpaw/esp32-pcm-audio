@@ -11,7 +11,6 @@
 		(title "IoT LED Driver HW")
 		(date "2025-02-23")
 		(rev "v3.2")
-		(company "iotled.jacobbokor.com")
 		(comment 3 "Date Code: ${DATE_CODE}")
 	)
 	(layers
@@ -284,6 +283,7 @@
 			(at -2.2 0.1 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c4f5c2c2-a2b5-4ff9-a5a3-6051be47a0c3")
 			(effects
 				(font
@@ -504,6 +504,7 @@
 			(at 2.399998 0.007 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "77684eb0-837f-44b9-8da7-f252c6bf15db")
 			(effects
 				(font
@@ -1315,6 +1316,7 @@
 			(at 2.425 0.025 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c9afc7e7-8031-4483-9215-42134a3f9973")
 			(effects
 				(font
@@ -1810,7 +1812,7 @@
 			(uuid "4efb6b73-d607-436c-a81b-f0ca9149bbd9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
+		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1833,6 +1835,7 @@
 			(at 7.1 0.1 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5058d9d4-dc18-4be8-b7a4-70aa3fa06c6b")
 			(effects
 				(font
@@ -2307,6 +2310,7 @@
 			(at -2.2625 -0.35 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "106c989e-7638-462c-a592-dfbb0e7b5dbc")
 			(effects
 				(font
@@ -2538,6 +2542,7 @@
 			(at -2.4 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "69dd8cf5-d688-42ac-bfeb-945296fb4168")
 			(effects
 				(font
@@ -2769,6 +2774,7 @@
 			(at -2.45 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0ca10cec-739d-4dcc-ac93-08eddf10cb70")
 			(effects
 				(font
@@ -3000,6 +3006,7 @@
 			(at -0.1 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5d9348fe-bf2d-4327-9186-ce0c7d3c87c3")
 			(effects
 				(font
@@ -3279,6 +3286,7 @@
 			(at 2.4375 -0.056 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7f177f9f-4538-4e26-ac24-fc898890c6cc")
 			(effects
 				(font
@@ -4089,6 +4097,7 @@
 			(at -2.82 -0.01575 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "adbf5cc4-a1a9-4e81-8883-973d752d176c")
 			(effects
 				(font
@@ -4320,6 +4329,7 @@
 			(at -2.4 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ee5993cd-05bc-4284-8136-3a0588abb43c")
 			(effects
 				(font
@@ -5139,6 +5149,7 @@
 			(at 0 3.6 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "3ce592a9-4a89-4845-8f1e-7aec87c5e8b1")
 			(effects
 				(font
@@ -5367,6 +5378,7 @@
 			(at -2.5 0.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "2598c571-4628-4f86-aaa3-1f525df451f9")
 			(effects
 				(font
@@ -5721,6 +5733,7 @@
 			(at -2.2 0.05 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ae429a4f-ce33-4677-a85d-8d99ead6f474")
 			(effects
 				(font
@@ -5941,6 +5954,7 @@
 			(at 2.45 0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4d6ddad7-e33e-49f4-8188-a90b90232178")
 			(effects
 				(font
@@ -6172,6 +6186,7 @@
 			(at -0.05 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ec4024e8-7890-468a-bbd9-d83247da0fbc")
 			(effects
 				(font
@@ -6465,6 +6480,7 @@
 			(at 5.08 -2.8 270)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "251fe7fa-5e2a-4b47-89c2-c045debd36fe")
 			(effects
 				(font
@@ -6714,7 +6730,7 @@
 				(xyz 0 0 0)
 			)
 		)
-		(model "${KICAD8_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6736,6 +6752,7 @@
 			(at -0.05 1.4 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4c516b08-8b80-4987-88c6-e794c10af1a3")
 			(effects
 				(font
@@ -6967,6 +6984,7 @@
 			(at -0.05 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "d41ece8b-e305-4246-9b07-43039c186360")
 			(effects
 				(font
@@ -7437,6 +7455,7 @@
 			(at 0.1 -3.6 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "68a78960-9a98-4f77-8808-90db94201c7b")
 			(effects
 				(font
@@ -7668,6 +7687,7 @@
 			(at -2.6375 0.2 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "641ef931-65bd-4b8d-ae66-4af230635462")
 			(effects
 				(font
@@ -8008,6 +8028,7 @@
 			(at -0.15 0.1 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ae023fa6-7164-410b-a0bf-4163f6349840")
 			(effects
 				(font
@@ -8600,6 +8621,7 @@
 			(at -2.1375 -0.082 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "25646077-508c-4a1b-83f9-c68a866d3f80")
 			(effects
 				(font
@@ -8942,7 +8964,7 @@
 			(uuid "22325e93-df7e-40b7-9ebe-e7e792edc746")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Sensor_Audio.3dshapes/Knowles_SPH0645LM4H-6_3.5x2.65mm.step"
+		(model "${KICAD10_3DMODEL_DIR}/Sensor_Audio.3dshapes/Knowles_SPH0645LM4H-6_3.5x2.65mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8964,6 +8986,7 @@
 			(at -2.637071 -0.199937 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "06fd8a51-40b0-4994-9aa1-5034faabde09")
 			(effects
 				(font
@@ -9195,6 +9218,7 @@
 			(at 2.55 -0.04825 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a7330099-da31-4b4f-97af-83621fa89922")
 			(effects
 				(font
@@ -9426,6 +9450,7 @@
 			(at 0 -2.75 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "41b0f221-d36b-43a9-b2bb-b6d890318a91")
 			(effects
 				(font
@@ -9721,6 +9746,7 @@
 			(at -2.3325 0.03 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "da4928c2-f412-46e9-adfc-2770dda89c67")
 			(effects
 				(font
@@ -9952,6 +9978,7 @@
 			(at 2.29 -0.01 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "982d9cf2-0128-490d-8641-366ef296a5dc")
 			(effects
 				(font
@@ -10526,6 +10553,7 @@
 			(at 2.537071 0.049937 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b817d0c0-0d08-4b95-a2e4-cc6edc781c11")
 			(effects
 				(font
@@ -11141,6 +11169,7 @@
 			(at 2.565 -0.04 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "aef719e4-8d01-4000-adeb-8b420737da27")
 			(effects
 				(font
@@ -11420,6 +11449,7 @@
 			(at -0.025 0.000001 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b62bbade-31c1-46b5-b3c4-3263ac30bfdd")
 			(effects
 				(font
@@ -12122,7 +12152,7 @@
 			)
 		)
 	)
-	(footprint "jmux-footprints:FUSE-TH_XF-505P"
+	(footprint "projectlib:FUSE-TH_XF-505P"
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "bebc62cb-50f2-46f6-aeb2-ed07ea473b92")
@@ -12131,6 +12161,7 @@
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7537839b-691e-4456-a65a-51c5987a37f7")
 			(effects
 				(font
@@ -12347,17 +12378,6 @@
 			(uuid "0a87bacc-7d4f-4445-a8b8-afe550c8b772")
 		)
 		(embedded_fonts no)
-		(model "${JMUX_KICAD_THINGS}/footprints/packages3d/FUSE-TH_XF-505P.wrl"
-			(offset
-				(xyz 0 -0.5 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 -180)
-			)
-		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
@@ -12490,6 +12510,7 @@
 			(at 1.8 0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4a4d08f0-ece8-46a6-ad64-675de78b8083")
 			(effects
 				(font
@@ -12761,6 +12782,7 @@
 			(at 2.4375 0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "937521c3-2dbd-4037-93f3-9ed33e58d64c")
 			(effects
 				(font
@@ -12992,6 +13014,7 @@
 			(at 5.08 -2.5 270)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "2f205e7c-977f-4467-aaa4-134ed44b339b")
 			(effects
 				(font
@@ -13230,7 +13253,7 @@
 			(uuid "2df617b5-3085-4fae-88a5-92f3ac3404b3")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13359,6 +13382,7 @@
 			(at -0.05 -0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "38b14665-f19b-4279-bc7a-40df075a0789")
 			(effects
 				(font
@@ -13651,6 +13675,7 @@
 			(at -2.3875 0.4 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "02f95ee1-f5f7-4c0b-865e-ca18f14b2914")
 			(effects
 				(font
@@ -14683,6 +14708,7 @@
 			(at 2.537072 0.149937 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "246d5610-469e-4116-8548-c5bf41e97002")
 			(effects
 				(font
@@ -14914,6 +14940,7 @@
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5c287c1c-6abd-42aa-a02d-4a97a070e5c6")
 			(effects
 				(font
@@ -15792,6 +15819,7 @@
 			(at 2.27 0.06 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "6bf06fe7-3323-4a3c-b564-52bfbf02f06c")
 			(effects
 				(font
@@ -16023,6 +16051,7 @@
 			(at 2.1375 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "d7cafee9-4efc-4396-af7a-f350b927fa13")
 			(effects
 				(font
@@ -16244,17 +16273,18 @@
 			)
 		)
 	)
-	(footprint "jmux-footprints:USB-C-GT7010_FIXED"
+	(footprint "projectlib:USB-C-GT7010_FIXED"
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "eb6c2a5f-b0a2-4228-b09a-c2386dc9cb19")
 		(at 170.400025 97.449911 90)
-		(descr "My standard footprint for USB-C, modified from the LCSC library to work with the kicad standard usb symbol")
+		(descr "USB-C 16P receptacle, G-Switch GT-USB-7010ASV, pin names matched to KiCad's USB_C_Receptacle_USB2.0_16P symbol")
 		(tags "USB-C-SMD_G-SWITCH_GT-USB-7010ASV footprint")
 		(property "Reference" "J3"
 			(at 0.1 1.6 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ef9c85a8-aacb-48e6-bdd3-40563dacc16d")
 			(effects
 				(font
@@ -16632,17 +16662,6 @@
 			(uuid "4b40b29b-2b9c-4241-933a-4d55899eb933")
 		)
 		(embedded_fonts no)
-		(model "/home/jmux/Documents/ae.projects/closet-temp-control/My_lib/footprint/packages3d/USB-C-SMD_G-SWITCH_GT-USB-7010ASV.wrl"
-			(offset
-				(xyz 0 -1.050010584 0.0001269999981)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
 		(model ":KICAD7_3DMODEL_DIR:Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 -1.5 0)
@@ -16665,6 +16684,7 @@
 			(at -0.35 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0d7735ac-acbf-44e8-b0cd-c76d6bad0bfb")
 			(effects
 				(font
@@ -17208,6 +17228,7 @@
 			(at 2.15 0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "22dcc139-1dcb-4ad9-b79d-dbfe48625b79")
 			(effects
 				(font
@@ -17439,6 +17460,7 @@
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0496930b-2783-4ced-b5b8-92d8d7912f6c")
 			(effects
 				(font
@@ -17974,6 +17996,7 @@
 			(at 2.1375 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "72b9ab11-0068-4122-a177-94c6c39f1353")
 			(effects
 				(font
@@ -18641,6 +18664,7 @@
 			(at 2.2875 0.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "56049d2c-8b5c-4bd5-a54c-efe7b37aff7a")
 			(effects
 				(font
@@ -18872,6 +18896,7 @@
 			(at 2.2375 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "892e1453-8d26-4775-98be-785010d716a1")
 			(effects
 				(font
@@ -19104,6 +19129,7 @@
 			(at 0 9.85 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "943f573f-bfb6-4e1a-a1ca-d9a9a7286ff5")
 			(effects
 				(font
@@ -19450,7 +19476,7 @@
 			(uuid "d8fbc921-0b56-433c-97ef-7359abdcb80a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -19472,6 +19498,7 @@
 			(at 2.937071 0.049937 0)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "02672c37-bd67-4fe8-b649-958e4770f3e7")
 			(effects
 				(font
@@ -20766,6 +20793,7 @@
 			(at -0.9 5.85 0)
 			(unlocked yes)
 			(layer "B.SilkS")
+			(hide yes)
 			(uuid "0338681e-0ac6-4d67-b3f5-4bc18b88027d")
 			(effects
 				(font
@@ -21491,9 +21519,9 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3RD_PARTY}/3dmodels/com_github_espressif_kicad-libraries/espressif.3dshapes/ESP32-S2-SOLO.STEP"
+		(model "${KICAD10_3DMODEL_DIR}/RF_Module.3dshapes/ESP32-S3-WROOM-1.step"
 			(offset
-				(xyz -9 -10 0)
+				(xyz 0 3 0)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -22175,19 +22203,6 @@
 		(at 144.6 70 0)
 		(layer "B.SilkS")
 		(uuid "4e85f17a-ad77-44df-85fd-f420ccd18429")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "iotled.jacobbokor.com"
-		(locked yes)
-		(at 148.059 71.83 0)
-		(layer "B.SilkS")
-		(uuid "f820ae82-a777-44fa-9690-138541403240")
 		(effects
 			(font
 				(size 1 1)

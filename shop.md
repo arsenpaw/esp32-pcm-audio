@@ -1,7 +1,7 @@
-# Shopping list: `hardware_github` board
+# Shopping list: `hardware` board
 
 This is the parts list for **one board**, using the cheapest in-stock part for each line. The
-board is `hardware_github/PCB/iot_led_strip_pcb.kicad_sch`. It's built with an ESP32-S3 so the
+board is `hardware/PCB/iot_led_strip_pcb.kicad_sch`. It's built with an ESP32-S3 so the
 PDM microphone works with WLED's sound-reactive mode.
 
 - **Prices** are unit prices at qty 1 in USD.
