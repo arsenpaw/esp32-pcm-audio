@@ -12,10 +12,13 @@ fp-info-cache
 *.kicad_pcb-bak
 
 # Generated manufacturing outputs (commit explicitly on release)
-hardware/fab/*
-!hardware/fab/.gitkeep
+hardware_deprecated/fab/*
+!hardware_deprecated/fab/.gitkeep
 
 # OS / editor
 .DS_Store
 .idea/
 .vscode/
+
+# KiCad local-history snapshots (nested git repo, machine-local)
+.history/

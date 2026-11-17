@@ -279,7 +279,7 @@ because ADC2 doesn't work while Wi-Fi is on.
   tools/kicad-mcp-server/     MCP server (git submodule)
   scripts/setup-mcp.sh        MCP server build + KiCad-Python venv
   docs/requirements/          this document
-  hardware/                   KiCad 10 project (hierarchical sheets: power, usb, mcu, leds, audio)
+  hardware_deprecated/        KiCad 10 project (hierarchical sheets: power, usb, mcu, leds, audio)
     lib/                      project symbols/footprints/3D
     fab/                      generated outputs (gitignored until release)
   firmware/wled-config.md     WLED settings from B9
@@ -328,7 +328,7 @@ datasheets; LCSC stock and MPNs for passives are not checked yet.
   what it left open: vias from power and ground pads into the planes (two per high-current
   pad where they fit), and rip-up-and-retry for boxed-in nets. No hand routing.
 - **Rules:** 0.15 mm clearance, 0.2 mm signal tracks, 0.5 mm power tracks, 0.6/0.3 mm vias.
-  `hardware/esp32-wled-audio.kicad_dru` allows 0.1 mm against the BQ24392's pads.
+  `hardware_deprecated/esp32-wled-audio.kicad_dru` allows 0.1 mm against the BQ24392's pads.
 - **DRC:** no errors, no unconnected items, schematic parity clean. Remaining warnings: the
   library silkscreen of J1 and U5 crosses the board edge. The thermal-relief check is
   relaxed to one spoke.

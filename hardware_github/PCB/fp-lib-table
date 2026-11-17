@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "projectlib")(type "KiCad")(uri "${KIPRJMOD}/projectlib/projectlib.pretty")(options "")(descr ""))
+  (lib (name "projectlib.3dshapes")(type "KiCad")(uri "${KIPRJMOD}/projectlib/projectlib.3dshapes")(options "")(descr "")(disabled))
+)
