@@ -217,15 +217,15 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "a4a5a01d-7a54-461f-a91e-cc6c1c70534e")
 	)
-	(model "/projectlib/projectlib.3dshapes/SSOP-5_L2.9-W1.6-P0.95-LS2.8-TL.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step"
 		(offset
-			(xyz 0 -0 -0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 90)
+			(xyz 0 0 0)
 		)
 	)
 )

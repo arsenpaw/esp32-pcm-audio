@@ -49,17 +49,19 @@ The schematic and PCB fields have been updated to match the table below.
 | R1, R4, R5 | 3 | 10 k 0805 | C17414 | Basic | 0.003 | 0.01 |
 | R3, R10 | 2 | 27 Ω 0805 | C17594 | Preferred | 0.003 | 0.01 |
 | R6 | 1 | 100 Ω 0805 | C17408 | Basic | 0.004 | 0.00 |
-| R7, R17 | 2 | 33 Ω 0805 (fit this pair **or** R16/R18) | C17634 | Basic | 0.005 | 0.01 |
+| R7, R17 | 2 | 33 Ω 0805 (strip data resistor, selected by SW3/SW4) | C17634 | Basic | 0.005 | 0.01 |
 | R8, R9 | 2 | 5.1 k 0805 (USB-C CC) | C27834 | Basic | 0.006 | 0.01 |
 | R12, R14 | 2 | 1 k 0805 | C17513 | Basic | 0.004 | 0.01 |
-| R16, R18 | 2 | 220 Ω 0805 (fit this pair **or** R7/R17) | C17557 | Basic | 0.006 | 0.01 |
+| R16, R18 | 2 | 220 Ω 0805 (strip data resistor, selected by SW3/SW4) | C17557 | Basic | 0.006 | 0.01 |
 | SW1, SW2 | 2 | Tactile switch 5.1 mm (RESET, FLASH) | C318884 | Basic | 0.021 | 0.04 |
 | SW3-5 | 3 | SK-3296S-01-L1 SPDT slide switch | C319020 | Extended | 0.082 | 0.25 |
 | U1 | 1 | AMS1117-3.3, SOT-223 | C6186 | Basic | 0.209 | 0.21 |
 | U2 | 1 | TAR5S50 5 V LDO (buffer supply) | C146354 | Extended | 0.361 | 0.36 |
 | U4 | 1 | 74HCT125T14-13, TSSOP-14 | C842453 | Extended | 0.238 | 0.24 |
+| JP1 | 1 | 1×2 pin header, 2.54 mm (USB power link) | C358684 | Extended | 0.009 | 0.01 |
+| JP1 | 1 | Jumper cap, 2.54 mm | C18185737 | Extended | 0.008 | 0.01 |
 
-**Total: about $9.15 per board** for every priced line. This leaves out J4, F3 and the PCB.
+**Total: about $9.17 per board** for every priced line. This leaves out J4, F3 and the PCB. [components.md](components.md) lists everything else you need to build it.
 The ESP32 module is almost half the cost.
 
 ## Where to buy MK1
@@ -104,9 +106,13 @@ connects, with the same GPIO on both modules:
 
 ## Ways to cut cost
 
-1. **Fit only one strip-resistor pair.** The schematic note says to use 33 Ω (R7, R17) when data
-   and GND share a cable, and 220 Ω (R16, R18) when they're separate wires. Buy only the pair you
-   need.
+1. **Set the options with solder bridges instead of switches.**
+   - **Data resistors:** skip SW3/SW4, bridge JP5/JP6 toward one side, and fit only that
+     resistor pair: 33 Ω (R7, R17) when data and GND share a cable, or 220 Ω (R16, R18) when
+     they're separate wires.
+   - **Strip voltage:** skip SW5, fit only the TVS pair for your strip voltage (D1/D2 for 5 V,
+     D7/D8 for 12 V), and bridge JP4 or JP8 to match.
+   - This saves about $0.34. [components.md](components.md) has the details.
 2. **Hand-solder the through-hole parts** (F2, J1, J2, J4, K2) even if JLCPCB assembles the rest.
    Every Extended part you leave off the assembly order saves $3.
 3. **Watch LCSC minimums when hand-assembling.** 0805 passives usually come in strips of 50 or
